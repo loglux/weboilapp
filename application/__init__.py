@@ -21,10 +21,10 @@ def create_app():
         for deliver in delivers:
             obj = Oil(deliver['company'], deliver['url'], deliver['method'])
             t = obj.html
-            print(deliver['url'])
-            print(obj.text_table)
+            #print(deliver['url'])
+            #print(obj.text_table)
             storage.html_tables.append(t)
         table = storage.html_tables
-        print(table)
+        #print(table)
         return render_template('table.html', table=table)
     return app
