@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 
 {% block header %}
-
-    <div class="row">
-     <div class="col-md-10">
-
     <div class="header">
 				<div class="card card-outline-secondary">
 					<div class="card-header text-center"><h3 class="mb-0">Belfast Oil Monitor</h3></div>
@@ -16,12 +12,7 @@
 {% endblock %}
 
 {% block page_content %}
-
-
     {% for tab in table %}
     {{ tab | safe }}
-                {%  endfor %}
-     </div><!--/col-->
-  </div><!--/row-->
-
+    {%  endfor %}
 {% endblock %}
