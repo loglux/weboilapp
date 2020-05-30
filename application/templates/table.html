@@ -1,46 +1,57 @@
-{% extends 'oil.html' %}
+{% extends 'base.html' %}
 
-{%  block title %} Belfast Oil Monitor{% endblock %}
-
-
-{% block styles %}
-    {{ super() }}
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% block header %}
+<div class="header">
+	<div class="container">
+		<!-- Start Section title -->
+		<!-- End Section title -->
+		<div class="row">
+			<div class="col-md-10">
+				<div class="col-lg-6 m-auto text-center">
+					<div class="section-title-wrap">
+						<h2 class="mb-0"></h2>
+					</div>
+				</div>
+				<!--  <hr class="my-5"> -->
+				<!-- form complex example -->
+				<div class="card card-outline-secondary">
+					<div class="card-header text-center">
+						<h3 class="mb-0">Belfast Oil Monitor</h3>
+					</div>
+					<div class="card-body text-center">
+						<!--1st row-->
+						<div class="row ">
+							<!--select county-->
+							<div class="col-sm-6"></div>
+							<!--filter by-->
+							<div class="col-sm-6"></div>
+						</div>
+					</div>
+					<div class="col-sm-6"></div>
+					<!--display price-->
+					<div id="autoUpdate" class="autoUpdate"></div>
+					<!--END - display price-->
+					<div class="card-footer text-center"></div>
+				</div>
+				<!--/card-->
+			</div>
+			<!--/card outline-->
+		</div>
+		<!--/col-->
+	</div>
+	<!--/row-->
+</div>
+<!--/container-->
 {% endblock %}
 
-{% block scripts %}
-    {{ super() }}
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-{% endblock %}
-
-
-{% block content %}
+{% block page_content %}
+<div class="container">
+		<div class="row">
+			<div class="col-md-10">
     {% for tab in table %}
     {{ tab | safe }}
-{%  endfor %}
-{% endblock %}
-
-{% block html_attribs %} class="no-js" lang="en"{% endblock %}
-
-{%  block metas  %}
-    {{ super() }}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="meta description">
-{% endblock %}
-
-
-{% block bootstrap_js_bottom %}
-  {{super()}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+                {%  endfor %}
+     </div><!--/col-->
+  </div><!--/row-->
+</div><!--/container-->
 {% endblock %}

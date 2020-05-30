@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+
+{%  block title %} Belfast Oil Monitor{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    {% endblock %}
+
+{% block html_attribs %} class="no-js" lang="en"{% endblock %}
+
+{%  block metas  %}
+    {{ super() }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+{% endblock %}
+
+{%  block content %}
+    {% block header %}{% endblock %}
+    {% block page_content %}{% endblock %}
+{% endblock %}
+
+

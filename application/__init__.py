@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, url_for, redirect, send_from_
 from application.oil import Oil
 from application.oil import Infos
 
+
 def create_app():
     app = Flask(__name__, instance_relative_config=False)
     @app.route('/')
