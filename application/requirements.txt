@@ -1,5 +1,8 @@
-requests==2.23.0
-pandas==1.0.3
-Flask==1.1.2
-requests_cache==0.5.2
-beautifulsoup4==4.9.1
+pandas
+Flask
+lxml
+requests_cache
+requests
+Flask_Bootstrap4
+beautifulsoup4
+
