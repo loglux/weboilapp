@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 from application.oil import Oil
 from application.oil import Infos
-
+from flask_bootstrap import Bootstrap
 
 def create_app():
     app = Flask(__name__, instance_relative_config=False)
@@ -29,3 +29,7 @@ def create_app():
         #print(table)
         return render_template('table.html', table=table)
     return app
+
+app = create_app()
+Bootstrap(app)
+

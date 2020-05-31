@@ -5,4 +5,4 @@ requests_cache
 requests
 Flask_Bootstrap4
 beautifulsoup4
-
+gunicorn
